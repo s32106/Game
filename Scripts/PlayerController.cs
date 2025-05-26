@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float moveSpeed = 10
-    public float jumpForce = 300
-    public float runSpeed = 20
+    public float moveSpeed = 10;
+    public float jumpForce = 300;
+    public float runSpeed = 20;
+
+    public GroundChecker GroundChecker;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +33,13 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && GroundChecker.isGrounded)
         { 
             //rb.AddForce(new Vector2(0,jumpForce));
             rb.AddForce(Vector2.up * jumpForce);
         }
     }
+
+   
+
 }
