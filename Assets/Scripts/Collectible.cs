@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class colectible : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,12 +10,12 @@ public class colectible : MonoBehaviour
         {
             return;
         }
+        //TODO send info to player
+        Inventory playerInventory = null;
+        playerInventory = collision.gameObject.GetComponent<Inventory>();
 
-        //send info to player (simillar to groundchecker)
-        collision.gameObject.GetComponent<Inventory>();
+        //playerInventory.
 
         Destroy(gameObject);
-
     }
-
 }

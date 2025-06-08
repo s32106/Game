@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-   //counter for collectibles
+    //TODO public counter for collectibles
 }
