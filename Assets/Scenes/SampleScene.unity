@@ -1174,6 +1174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124460218}
   - component: {fileID: 2124460217}
+  - component: {fileID: 2124460224}
   - component: {fileID: 2124460220}
   - component: {fileID: 2124460219}
   - component: {fileID: 2124460221}
@@ -1286,8 +1287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.076587796, y: -0.035881463}
-  m_Size: {x: 0.19157195, y: 0.34843218}
+  m_Offset: {x: -0.076587796, y: -0.032279093}
+  m_Size: {x: 0.19157195, y: 0.34122744}
   m_Direction: 0
 --- !u!50 &2124460220
 Rigidbody2D:
@@ -1332,6 +1333,8 @@ MonoBehaviour:
   runSpeed: 7
   jumpForce: 300
   rb: {fileID: 0}
+  anim: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   groundChecker: {fileID: 1167381673}
   health: {fileID: 0}
 --- !u!114 &2124460222
@@ -1360,7 +1363,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  anim: {fileID: 0}
   isDead: 0
+--- !u!95 &2124460224
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124460216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a22008b90caf8fc41bfe9ae26a2d7dae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
