@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.18, y: -2.82, z: -10}
+  m_LocalPosition: {x: -2.4650006, y: -3.254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -792,7 +792,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016935125, y: 0.001128965}
+  m_Offset: {x: 0.09609632, y: 0.06219448}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -803,7 +803,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.076471135, y: 0.0313109}
+  m_Size: {x: 0.08675191, y: 0.027922958}
   m_EdgeRadius: 0
 --- !u!114 &1167381673
 MonoBehaviour:
@@ -883,7 +883,7 @@ Transform:
   m_GameObject: {fileID: 1309972526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.18, y: -2.82, z: -10}
+  m_LocalPosition: {x: -2.4650006, y: -3.254, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1228,7 +1228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3318188226485093758, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
+  m_Sprite: {fileID: -1339076896, guid: b91344ee21cd9224f80ca83273b1e183, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1248,7 +1248,7 @@ Transform:
   m_GameObject: {fileID: 2124460216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.18, y: -2.82, z: 0}
+  m_LocalPosition: {x: -2.465, y: -3.254, z: 0}
   m_LocalScale: {x: 2.8738, y: 2.8738, z: 2.8738}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1287,8 +1287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.076587796, y: -0.032279093}
-  m_Size: {x: 0.19157195, y: 0.34122744}
+  m_Offset: {x: -0.010724107, y: -0.015813172}
+  m_Size: {x: 0.17576471, y: 0.29248837}
   m_Direction: 0
 --- !u!50 &2124460220
 Rigidbody2D:
