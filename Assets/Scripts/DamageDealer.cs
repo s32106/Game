@@ -18,6 +18,8 @@ public class DamageDealer : MonoBehaviour
         if (health == null)
         {
             return;
+
+
         }
 
         health.TakeDamage(damage);

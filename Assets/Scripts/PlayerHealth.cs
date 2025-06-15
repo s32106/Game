@@ -12,12 +12,15 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
 
     public bool isDead = false;
-
-
+    public static PlayerHealth instance;
+    void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         anim = GetComponent<Animator>();
-
+        healthText.text = "Health: " + health.ToString();
     }
 
     public void TakeDamage(float damage)
@@ -37,6 +40,11 @@ public class PlayerHealth : MonoBehaviour
             isDead = true;
             anim.SetTrigger("isDead");
         }
+    }
+    public void decreaseHealth(int v)
+    {
+        health += v;
+        healthText.text = "Health: " + health.ToString();
     }
 
 }
