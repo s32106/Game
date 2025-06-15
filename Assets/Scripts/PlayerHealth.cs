@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public TMP_Text healthText;
 
     public bool isDead = false;
-    public bool isHurt = false;
+
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            isHurt = true;
+
         }
         if (health > maxHealth)
         {

@@ -38,6 +38,15 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != 0)
         {
+            anim.SetBool("isWalk", true);
+        }
+        else
+        {
+            anim.SetBool("isWalk", false);
+        }
+
+        if (moveInput != 0)
+        {
             anim.SetBool("isRun", true);
         }
         else
@@ -45,17 +54,39 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isRun", false);
         }
 
+        if (rb.velocity.y != 0)
+            anim.SetBool("isJump", true);
+
+        if (rb.velocity.y > 0)
+        {
+            anim.SetBool("isJumptoFall", true);
+            anim.SetBool("isJump", false);
+        }
+
+
+        if (rb.velocity.y < 0)
+        {
+            anim.SetBool("isJumptoFall", false);
+            anim.SetBool("isFall", true);
+        }
+
+        if (rb.velocity.y == 0)
+        {
+            anim.SetBool("isJump", false);
+            anim.SetBool("isFall", false);
+            anim.SetBool("isJumptoFall", false);
+        }
 
         //Debug.Log($"Input value: {moveInput}");
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
-            anim.SetBool("isRun", true);
+
         }
         else
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-            anim.SetBool("isRun", false);
+
         }
 
 
@@ -64,7 +95,6 @@ public class PlayerController : MonoBehaviour
         {
             //rb.AddForce(new Vector2(0,jumpForce));
             rb.AddForce(Vector2.up * jumpForce);
-            anim.SetBool("isJump", true);
         }
 
     }
