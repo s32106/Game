@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5;
-    public float runSpeed = 7;
+    public float moveSpeed = 4;
+    public float runSpeed = 6;
     public float jumpForce = 300;
     public Rigidbody2D rb;
     public Animator anim;
@@ -35,31 +35,38 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-       
-        if(moveInput != 0)
+
+        if (moveInput != 0)
         {
-            anim.SetBool("isRun",true);
+            anim.SetBool("isRun", true);
         }
         else
         {
             anim.SetBool("isRun", false);
         }
 
+
         //Debug.Log($"Input value: {moveInput}");
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+            anim.SetBool("isRun", true);
         }
         else
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+            anim.SetBool("isRun", false);
         }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space) && groundChecker.isGrounded)
         {
             //rb.AddForce(new Vector2(0,jumpForce));
             rb.AddForce(Vector2.up * jumpForce);
+            anim.SetBool("isJump", true);
         }
+
     }
 
 }

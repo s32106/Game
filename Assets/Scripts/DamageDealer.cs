@@ -15,11 +15,12 @@ public class DamageDealer : MonoBehaviour
 
         PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
 
-        if(health == null)
+        if (health == null)
         {
             return;
         }
 
         health.TakeDamage(damage);
+
     }
 }

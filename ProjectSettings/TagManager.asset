@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Background
+  - Danger
+  - Foreground
+  - Sky
   layers:
   - Default
   - TransparentFX
@@ -40,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 2507179279
+    locked: 0
+  - name: Background
+    uniqueID: 1476408217
+    locked: 0
+  - name: Ground
+    uniqueID: 1868279719
+    locked: 0
+  - name: Foreground
+    uniqueID: 3033980093
     locked: 0
