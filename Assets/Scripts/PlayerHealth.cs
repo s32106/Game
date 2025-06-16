@@ -40,11 +40,7 @@ public class PlayerHealth : MonoBehaviour
             isDead = true;
             anim.SetTrigger("isDead");
         }
-    }
-    public void decreaseHealth(int v)
-    {
-        health += v;
         healthText.text = "Health: " + health.ToString();
     }
-
+    
 }
